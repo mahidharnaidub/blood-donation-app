@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------- GLOBAL ---------------- */
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: #fff6f6;
+}
+
+/* ---------------- FADE UP ANIMATION ---------------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- SKELETON LOADER ---------------- */
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e4e4e4 37%,
+    #f0f0f0 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* ---------------- SCROLLBAR (MOBILE CLEAN) ---------------- */
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+/* ---------------- TAP FEEDBACK ---------------- */
+button:active {
+  transform: scale(0.97);
+}
